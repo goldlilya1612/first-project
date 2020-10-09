@@ -32,11 +32,8 @@
 
 .header__title {
   width: 730px;
-  align-self: center; /* TODO */
+  align-self: center;
   z-index: 2;
-}
-
-.header__title h1 {
   padding: 0;
   margin: 0 0 0 64px;
 
@@ -44,7 +41,7 @@
   font-size: 102px;
 }
 
-.header__subtitle p{
+.header__subtitle {
   width: 388px;
   position: absolute;
   left: 64px;
@@ -108,7 +105,7 @@
   min-width: 784px;
 }
 
-.two-columns__main-text p{
+.two-columns__paragraph{
   padding-top: 0;
   margin: 0 0 30px 0;
   line-height: 34px;
@@ -116,7 +113,7 @@
   font-weight: normal;
 }
 
-.two-columns__main-text p:nth-of-type(3n) {
+.two-columns__paragraph:last-of-type {
   margin-bottom: 0;
 }
 
@@ -184,6 +181,7 @@
 .feynman {
   position: relative;
   height: 790px;
+  padding-top: 100px;
   text-align: center;
   background-color: #f2f2f2;
 }
@@ -191,7 +189,7 @@
 .feynman__title {
   position: relative;
   margin: 0 auto;
-  padding: 100px 0 0 0;
+  padding: 0;
   width: 648px;
 
   line-height: 1.15;
@@ -270,6 +268,9 @@
 }
 
 .kaufman__triangle {
+  border: 1px solid red;
+  background-image: url('../images/kaufman-triangle.svg');
+  background-size: contain;
   position: absolute;
   top: 0;
   right: -210px;
@@ -279,22 +280,30 @@
 }
 
 .footer{
+  box-sizing: border-box;
   background-color: #1f1f1f;
   min-height: 350px;
+  padding: 60px 0 40px 0;
 }
 
 .footer__columns {
   display: flex;
   justify-content: space-between;
-  height: 200px; /*удали*/
+  min-height: 250px;
   width: 90%;
-  padding: 60px 0 40px 0;
   margin: 0 auto;
+}
+
+.footer__column{
+  color: white;
 }
 
 .footer__column_content_copyright {
   position: relative;
-  width: 50%;
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer {
@@ -303,30 +312,25 @@
 }
 
 .footer__author {
-  position: absolute;
-  margin-top: 18px;
-  bottom: 18px;
-  left: 0;
-  color: white;
+  margin: 18px 0 18px 0;
   line-height: 25px;
   font-size: 18px;
 }
 
 .footer__column-heading {
-  color: white;
   line-height: 30px;
   font-size: 18px;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
-.list {
+.footer__column-links {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 16px;
 }
 
-.footer__column_links {
+.footer__column-link {
   color: white;
   text-decoration: none;
   line-height: 30px;
